@@ -13,11 +13,11 @@ struct graph
     // The node reached by vertex i's first outgoing edge is given by
     // outgoing_edges[outgoing_starts[i]].  To iterate over all
     // outgoing edges, please see the top-down bfs implementation.
-    int* outgoing_starts;
+    int* outgoing_starts; // pointer to first edge for vertex i in outgoing_edges
     Vertex* outgoing_edges;
 
     int* incoming_starts;
-    Vertex* incoming_edges;
+    Vertex* incoming_edges; // pointer to last edge for vertex i in outgoing_edges
 };
 
 using Graph = graph*;
